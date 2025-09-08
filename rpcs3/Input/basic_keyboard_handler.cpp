@@ -246,7 +246,7 @@ void basic_keyboard_handler::LoadSettings(Keyboard& keyboard)
 	buttons.emplace_back(Qt::Key_division, CELL_KEYC_KPAD_SLASH);    // should ideally be slash but that's occupied obviously
 	buttons.emplace_back(Qt::Key_multiply, CELL_KEYC_KPAD_ASTERISK); // should ideally be asterisk but that's occupied obviously
 	//buttons.emplace_back(Qt::Key_Minus, CELL_KEYC_KPAD_MINUS);     // should ideally be minus but that's occupied obviously
-	buttons.emplace_back(Qt::Key_Plus, CELL_KEYC_KPAD_PLUS);
+	//buttons.emplace_back(Qt::Key_Plus, CELL_KEYC_KPAD_PLUS);
 	buttons.emplace_back(Qt::Key_Enter, CELL_KEYC_KPAD_ENTER);
 	//buttons.emplace_back(Qt::Key_1, CELL_KEYC_KPAD_1);
 	//buttons.emplace_back(Qt::Key_2, CELL_KEYC_KPAD_2);
@@ -305,28 +305,45 @@ void basic_keyboard_handler::LoadSettings(Keyboard& keyboard)
 	buttons.emplace_back(Qt::Key_Space, CELL_KEYC_SPACE);
 	buttons.emplace_back(Qt::Key_Minus, CELL_KEYC_MINUS);
 	buttons.emplace_back(Qt::Key_Equal, CELL_KEYC_EQUAL_101);
-	buttons.emplace_back(Qt::Key_AsciiCircum, CELL_KEYC_ACCENT_CIRCONFLEX_106);
-	buttons.emplace_back(Qt::Key_At, CELL_KEYC_ATMARK_106);
+	//buttons.emplace_back(Qt::Key_AsciiCircum, CELL_KEYC_ACCENT_CIRCONFLEX_106);
 	buttons.emplace_back(Qt::Key_Semicolon, CELL_KEYC_SEMICOLON);
 	buttons.emplace_back(Qt::Key_Apostrophe, CELL_KEYC_QUOTATION_101);
-	buttons.emplace_back(Qt::Key_Colon, CELL_KEYC_COLON_106);
+	buttons.emplace_back(Qt::Key_Colon, CELL_KEYC_SEMICOLON);
 	buttons.emplace_back(Qt::Key_Comma, CELL_KEYC_COMMA);
 	buttons.emplace_back(Qt::Key_Period, CELL_KEYC_PERIOD);
 	buttons.emplace_back(Qt::Key_Slash, CELL_KEYC_SLASH);
 	buttons.emplace_back(Qt::Key_yen, CELL_KEYC_YEN_106);
-
+	buttons.emplace_back(Qt::Key_Question, CELL_KEYC_SLASH);
+	buttons.emplace_back(Qt::Key_Exclam, CELL_KEYC_1);
+	buttons.emplace_back(Qt::Key_At, CELL_KEYC_2);
+	buttons.emplace_back(Qt::Key_NumberSign, CELL_KEYC_3);
+	buttons.emplace_back(Qt::Key_Dollar, CELL_KEYC_4);
+	buttons.emplace_back(Qt::Key_Percent, CELL_KEYC_5);
+	buttons.emplace_back(Qt::Key_AsciiCircum, CELL_KEYC_6);
+	buttons.emplace_back(Qt::Key_Ampersand, CELL_KEYC_7);
+	buttons.emplace_back(Qt::Key_Asterisk, CELL_KEYC_8);
+	buttons.emplace_back(Qt::Key_ParenLeft, CELL_KEYC_9);
+	buttons.emplace_back(Qt::Key_ParenRight, CELL_KEYC_0);
+	buttons.emplace_back(Qt::Key_Underscore, CELL_KEYC_MINUS);
+	buttons.emplace_back(Qt::Key_Plus, CELL_KEYC_EQUAL_101);
+	buttons.emplace_back(Qt::Key_QuoteDbl, CELL_KEYC_QUOTATION_101);
+	
 	// Some buttons share the same key code on different layouts
 	if (keyboard.m_config.arrange == CELL_KB_MAPPING_106)
 	{
 		buttons.emplace_back(Qt::Key_Backslash, CELL_KEYC_BACKSLASH_106);
 		buttons.emplace_back(Qt::Key_BracketLeft, CELL_KEYC_LEFT_BRACKET_106);
 		buttons.emplace_back(Qt::Key_BracketRight, CELL_KEYC_RIGHT_BRACKET_106);
+		buttons.emplace_back(Qt::Key_BraceLeft, CELL_KEYC_LEFT_BRACKET_106);
+		buttons.emplace_back(Qt::Key_BraceRight, CELL_KEYC_RIGHT_BRACKET_106);
 	}
 	else
 	{
 		buttons.emplace_back(Qt::Key_Backslash, CELL_KEYC_BACKSLASH_101);
 		buttons.emplace_back(Qt::Key_BracketLeft, CELL_KEYC_LEFT_BRACKET_101);
 		buttons.emplace_back(Qt::Key_BracketRight, CELL_KEYC_RIGHT_BRACKET_101);
+		buttons.emplace_back(Qt::Key_BraceLeft, CELL_KEYC_LEFT_BRACKET_101);
+		buttons.emplace_back(Qt::Key_BraceRight, CELL_KEYC_RIGHT_BRACKET_101);
 	}
 
 	// Made up helper buttons
